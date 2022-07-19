@@ -30,10 +30,10 @@ deleteKey.addEventListener("click", () => {
 function calculate(){
     let tokens = display.split("");
 
-    if (tokens[tokens.length - 2] === '+' ||
-        tokens[tokens.length - 2] === '-' ||
-        tokens[tokens.length - 2] === 'x' ||
-        tokens[tokens.length - 2] === '/')
+    if (tokens[tokens.length - 1] === '+' ||
+        tokens[tokens.length - 1] === '-' ||
+        tokens[tokens.length - 1] === 'x' ||
+        tokens[tokens.length - 1] === '/')
         {
             return;
         }
@@ -112,7 +112,7 @@ function divide (a, b){
     return a / b; 
 }
 
-function operator (operator, a, b){
+function operator (operator, b, a){
     switch (operator){
         case "+":
             return add(a, b);
